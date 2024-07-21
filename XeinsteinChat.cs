@@ -49,10 +49,20 @@ namespace Xeinstein
                 else if (word.ToUpper() == "ANNOY")
                 {
                     //This will beep 27 times
-                    for(int i = 0; i <= 27; i++)
+                    for (int i = 0; i <= 27; i++)
                     {
                         Console.Beep();
                     }
+                    return true;
+                }
+                else if (word.ToUpper() == "STORY")
+                {
+                    Actions.Story();
+                    return true;
+                }
+                else if (word.ToUpper() == "JOKE")
+                {
+                    Actions.Joke();
                     return true;
                 }
             }

@@ -8,6 +8,11 @@ namespace Xeinstein
 {
     public class Actions
     {
+        //Global variables for random number generation
+        static Random rnd = new Random();
+        static int maximumNumber;
+        static int randomNumberInRange;
+
         //This method determines whether the terminal program should be closed or not.
         public static void DetermineTerminalLoop()
         {
@@ -36,6 +41,34 @@ namespace Xeinstein
         public static void ClearScreen()
         {
             Console.Clear();
+        }
+
+        // This method tells a story
+        public static void Story()
+        {
+            // Initialize the hashmap with jokes
+            ActionGlobalVariables.initializeStories();
+
+            // Necesary variables needed.
+            maximumNumber = ActionGlobalVariables.stories.Count;
+            randomNumberInRange = rnd.Next(0, maximumNumber);
+
+            Console.WriteLine(ActionGlobalVariables.stories.ElementAt(randomNumberInRange));
+        }
+
+        // This method tells a joke
+        public static void Joke()
+        {
+            // Initialize the hashmap with jokes
+            ActionGlobalVariables.initializeJokes();
+
+            // Necesary variables needed.
+            maximumNumber = ActionGlobalVariables.jokes.Count;
+            randomNumberInRange = rnd.Next(0, maximumNumber);
+
+            // Output the screen
+            Console.WriteLine(ActionGlobalVariables.jokes.ElementAt(randomNumberInRange).Key);
+            Console.WriteLine(ActionGlobalVariables.jokes.ElementAt(randomNumberInRange).Value);
         }
     }
 }
