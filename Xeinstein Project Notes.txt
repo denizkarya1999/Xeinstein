@@ -1,0 +1,21 @@
+Name: Xeinstein
+Description: A chat app that makes decisions based on Continuum acts. (Karya`s Centralized System)
+Mechanism:
+ 1- User describes a situation to a terminal or a GUI-based app.
+ 2- The algorithm parses the sentences into a word array.
+ 3- The algorithm uses various classes to retrieve necessary data.
+    Example: 
+     1- If the situation is about whether someone is a dating manipulator or not.
+     2- The algorithm determines its about "dating".
+     3- Pulls out information (variables, methods and dictionaries etc.) from Dating class.
+ 4- After the algorithm processes the output, it returns a string output.
+Necessary Resources:
+ # Xommand - https://github.com/denizkarya1999/Xommand
+ # Xogic - https://github.com/denizkarya1999/Xogic
+Inspired from:
+ # ChatGPT
+ # Cortana (Old Microsoft App)
+Programming Language: C#
+Platform: Windows Forms / .NET Core 6.0
+Expected Release Date: Before August 2024
+ 
